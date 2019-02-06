@@ -12,7 +12,7 @@ import FontBlaster
 /// Reader container
 open class FolioReaderContainer: UIViewController {
     var shouldHideStatusBar = true
-    var shouldRemoveEpub = true
+    var shouldRemoveEpub = false
     
     // Mark those property as public so they can accessed from other classes/subclasses.
     public var epubPath: String
@@ -38,7 +38,7 @@ open class FolioReaderContainer: UIViewController {
     ///   - path: The ePub path on system. Must not be nil nor empty string.
 	///   - unzipPath: Path to unzip the compressed epub.
     ///   - removeEpub: Should delete the original file after unzip? Default to `true` so the ePub will be unziped only once.
-    public init(withConfig config: FolioReaderConfig, folioReader: FolioReader, epubPath path: String, unzipPath: String? = nil, removeEpub: Bool = true) {
+    public init(withConfig config: FolioReaderConfig, folioReader: FolioReader, epubPath path: String, unzipPath: String? = nil, removeEpub: Bool = false) {
         self.readerConfig = config
         self.folioReader = folioReader
         self.epubPath = path
@@ -99,7 +99,7 @@ open class FolioReaderContainer: UIViewController {
     ///   - path: The ePub path on system. Must not be nil nor empty string.
 	///   - unzipPath: Path to unzip the compressed epub.
     ///   - removeEpub: Should delete the original file after unzip? Default to `true` so the ePub will be unziped only once.
-    open func setupConfig(_ config: FolioReaderConfig, epubPath path: String, unzipPath: String? = nil, removeEpub: Bool = true) {
+    open func setupConfig(_ config: FolioReaderConfig, epubPath path: String, unzipPath: String? = nil, removeEpub: Bool = false) {
         self.readerConfig = config
         self.folioReader = FolioReader()
         self.folioReader.readerContainer = self
