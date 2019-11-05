@@ -16,8 +16,8 @@ PODS:
   - Realm (3.11.0):
     - Realm/Headers (= 3.11.0)
   - Realm/Headers (3.11.0)
-  - RealmSwift (3.11.0):
-    - Realm (= 3.11.0)
+  - RealmSwift (3.20.0):
+    - Realm (= 3.20.0)
   - SSZipArchive (2.1.1)
   - ZFDragableModalTransition (0.6)
 
