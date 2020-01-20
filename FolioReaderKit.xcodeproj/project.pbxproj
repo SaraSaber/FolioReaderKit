@@ -56,7 +56,6 @@
 		1A958FBD1D397BE900D56699 /* Raleway-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A958F391D397BE900D56699 /* Raleway-BoldItalic.ttf */; };
 		1A958FBE1D397BE900D56699 /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A958F3A1D397BE900D56699 /* Raleway-Italic.ttf */; };
 		1A958FBF1D397BE900D56699 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A958F3B1D397BE900D56699 /* Raleway-Regular.ttf */; };
-		1A9590121D397BE900D56699 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 1A958F8F1D397BE900D56699 /* Style.css */; };
 		1A9590131D397BE900D56699 /* ScrollScrubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A958F901D397BE900D56699 /* ScrollScrubber.swift */; };
 		1A9590151D397C1300D56699 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9590141D397C1300D56699 /* Images.xcassets */; };
 		1A9590171D397CAF00D56699 /* FolioReaderKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 1A9590161D397CAF00D56699 /* FolioReaderKit.podspec */; };
@@ -170,7 +169,6 @@
 		1A958F391D397BE900D56699 /* Raleway-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BoldItalic.ttf"; sourceTree = "<group>"; };
 		1A958F3A1D397BE900D56699 /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic.ttf"; sourceTree = "<group>"; };
 		1A958F3B1D397BE900D56699 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
-		1A958F8F1D397BE900D56699 /* Style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
 		1A958F901D397BE900D56699 /* ScrollScrubber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollScrubber.swift; sourceTree = "<group>"; };
 		1A9590141D397C1300D56699 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1A9590161D397CAF00D56699 /* FolioReaderKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FolioReaderKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -297,7 +295,6 @@
 				1A958F271D397BE900D56699 /* Fonts */,
 				1A9590141D397C1300D56699 /* Images.xcassets */,
 				1A958F261D397BE900D56699 /* Bridge.js */,
-				1A958F8F1D397BE900D56699 /* Style.css */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -514,6 +511,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = B0D699011D035FA1003B4CCD;
@@ -544,7 +542,6 @@
 				1A958FAF1D397BE900D56699 /* Bridge.js in Resources */,
 				1A958FBC1D397BE900D56699 /* Raleway-Bold.ttf in Resources */,
 				1A958FB71D397BE900D56699 /* Lato-Regular.ttf in Resources */,
-				1A9590121D397BE900D56699 /* Style.css in Resources */,
 				1A958FB01D397BE900D56699 /* Andada-Bold.otf in Resources */,
 				1A9590171D397CAF00D56699 /* FolioReaderKit.podspec in Resources */,
 				1A958FB51D397BE900D56699 /* Lato-BoldItalic.ttf in Resources */,
