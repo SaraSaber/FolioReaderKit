@@ -85,7 +85,7 @@ open class FolioReaderPage: UICollectionViewCell, UIWebViewDelegate, UIGestureRe
             webView?.scrollView.showsVerticalScrollIndicator = false
             webView?.scrollView.showsHorizontalScrollIndicator = false
             webView?.backgroundColor = .clear
-            self.contentView.addSubview(webView!)
+//            self.contentView.addSubview(webView!)
         }
         webView?.delegate = self
 
