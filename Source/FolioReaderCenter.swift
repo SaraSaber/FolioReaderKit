@@ -666,7 +666,7 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
     func pagesForCurrentPage(_ page: FolioReaderPage?) {
         guard let page = page, let webView = page.webView else { return }
 
-        let pageSize = self.readerConfig.isDirection(pageHeight, self.pageWidth, pageHeight)
+        let pageSize = self.readerConfig.isDirection(pageHeight, self.pageWidth, pageHeight + 30.0)
         let contentSize = page.webView?.scrollView.contentSize.forDirection(withConfiguration: self.readerConfig) ?? 0
         self.pageIndicatorView?.totalPages = ((pageSize != 0) ? Int(ceil(contentSize / pageSize)) : 0)
 
