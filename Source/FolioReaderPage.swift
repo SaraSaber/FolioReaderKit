@@ -135,9 +135,9 @@ open class FolioReaderPage: UICollectionViewCell, UIWebViewDelegate, UIGestureRe
 
         return CGRect(
             x: bounds.origin.x,
-            y: self.readerConfig.isDirection(bounds.origin.y + navTotal, bounds.origin.y + navTotal + paddingTop, bounds.origin.y + navTotal),
+            y: self.readerConfig.isDirection(bounds.origin.y + navTotal, bounds.origin.y + navTotal, bounds.origin.y + navTotal),
             width: bounds.width,
-            height: self.readerConfig.isDirection(bounds.height - navTotal, bounds.height - navTotal - paddingTop - paddingBottom, bounds.height - navTotal) - 30.0
+            height: self.readerConfig.isDirection(bounds.height - navTotal, bounds.height - navTotal - paddingTop - paddingBottom, bounds.height - navTotal)
         )
     }
 
