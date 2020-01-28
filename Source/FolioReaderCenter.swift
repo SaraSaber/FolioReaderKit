@@ -491,6 +491,7 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         classes += " \(folioReader.currentFontSize.cssIdentifier)"
 
         html = html.replacingOccurrences(of: "<html ", with: "<html class=\"\(classes)\"")
+        html = html.replacingOccurrences(of: "</body></html>", with: "<div><br></div></body></html>")
 
         // Let the delegate adjust the html string
         if let modifiedHtmlContent = self.delegate?.htmlContentForPage?(cell, htmlContent: html) {
@@ -612,7 +613,7 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
                 self.pageWidth = screenBounds.size.width
                 self.pageHeight = screenBounds.size.height + 30.0
             } else {
-                self.pageWidth = screenBounds.size.height 
+                self.pageWidth = screenBounds.size.height
                 self.pageHeight = screenBounds.size.width
             }
             return
