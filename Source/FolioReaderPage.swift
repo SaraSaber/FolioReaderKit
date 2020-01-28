@@ -132,7 +132,7 @@ open class FolioReaderPage: UICollectionViewCell, UIWebViewDelegate, UIGestureRe
         let navTotal = self.readerConfig.shouldHideNavigationOnTap ? 0 : statusbarHeight + navBarHeight
         let paddingTop: CGFloat = 20
         let paddingBottom: CGFloat = 500
-        let h = 250.0
+        let h: CGFloat = 250.0
 
         return CGRect(
             x: bounds.origin.x,
