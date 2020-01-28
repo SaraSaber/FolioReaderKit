@@ -610,9 +610,9 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         guard orientation.isPortrait else {
             if screenBounds.size.width > screenBounds.size.height {
                 self.pageWidth = screenBounds.size.width
-                self.pageHeight = screenBounds.size.height
+                self.pageHeight = screenBounds.size.height + 30.0
             } else {
-                self.pageWidth = screenBounds.size.height
+                self.pageWidth = screenBounds.size.height 
                 self.pageHeight = screenBounds.size.width
             }
             return
@@ -620,7 +620,7 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
 
         if screenBounds.size.width < screenBounds.size.height {
             self.pageWidth = screenBounds.size.width
-            self.pageHeight = screenBounds.size.height
+            self.pageHeight = screenBounds.size.height + 30.0
         } else {
             self.pageWidth = screenBounds.size.height
             self.pageHeight = screenBounds.size.width
@@ -667,7 +667,7 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         guard let page = page, let webView = page.webView else { return }
 
         let pageSize = self.readerConfig.isDirection(pageHeight, self.pageWidth, pageHeight)
-        let contentSize = page.webView?.scrollView.contentSize.forDirection(withConfiguration: self.readerConfig) ?? 0
+        let contentSize = (page.webView?.scrollView.contentSize.forDirection(withConfiguration: self.readerConfig)) + 30.0 ?? 0
         self.pageIndicatorView?.totalPages = ((pageSize != 0) ? Int(ceil(contentSize / pageSize)) : 0)
 
         let pageOffSet = self.readerConfig.isDirection(webView.scrollView.contentOffset.x, webView.scrollView.contentOffset.x, webView.scrollView.contentOffset.y)
