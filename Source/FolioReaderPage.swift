@@ -145,6 +145,7 @@ open class FolioReaderPage: UICollectionViewCell, UIWebViewDelegate, UIGestureRe
         // Insert the stored highlights to the HTML
         let tempHtmlContent = htmlContentWithInsertHighlights(htmlContent)
         // Load the html into the webview
+        print("tempHtmlContent ==== \(tempHtmlContent)")
         webView?.alpha = 0
         webView?.loadHTMLString(tempHtmlContent, baseURL: baseURL)
     }
