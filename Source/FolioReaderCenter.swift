@@ -500,7 +500,7 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         
         print ("html ==== \(html)")
 
-        cell.loadHTMLString(html, baseURL: nil)
+        cell.loadHTMLString(html, baseURL: URL(fileURLWithPath: resource.fullHref.deletingLastPathComponent))
         return cell
     }
 

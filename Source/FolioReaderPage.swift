@@ -147,7 +147,7 @@ open class FolioReaderPage: UICollectionViewCell, UIWebViewDelegate, UIGestureRe
         // Load the html into the webview
         print("tempHtmlContent ==== \(tempHtmlContent)")
         webView?.alpha = 0
-        webView?.loadHTMLString(tempHtmlContent, baseURL: baseURL)
+        webView?.loadHTMLString(htmlContent, baseURL: baseURL)
     }
 
     // MARK: - Highlights
