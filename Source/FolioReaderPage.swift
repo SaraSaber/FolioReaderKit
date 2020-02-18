@@ -255,7 +255,7 @@ open class FolioReaderPage: UICollectionViewCell, UIWebViewDelegate, UIGestureRe
 
 </div><div><br></div></body></html>
 """
-        webView?.loadHTMLString(htmlContent, baseURL: baseURL)
+        webView?.loadHTMLString(s, baseURL: baseURL)
     }
 
     // MARK: - Highlights
