@@ -471,7 +471,7 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         // Inject CSS
         let jsFilePath = Bundle.frameworkBundle().path(forResource: "Bridge", ofType: "js")
         let cssFilePath = Bundle.frameworkBundle().path(forResource: "Style", ofType: "css")
-        let cssTag = ""
+        let cssTag = "<link rel=\"stylesheet\" type=\"text/css\" href=\"\(cssFilePath!)\">"
         let jsTag = "<script type=\"text/javascript\" src=\"\(jsFilePath!)\"></script>" +
         "<script type=\"text/javascript\">setMediaOverlayStyleColors(\(mediaOverlayStyleColors))</script>"
 
@@ -498,8 +498,6 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
             html = modifiedHtmlContent
         }
         
-        print ("html ==== \(html)")
-
         cell.loadHTMLString(html, baseURL: URL(fileURLWithPath: resource.fullHref.deletingLastPathComponent))
         return cell
     }
@@ -613,7 +611,7 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         guard orientation.isPortrait else {
             if screenBounds.size.width > screenBounds.size.height {
                 self.pageWidth = screenBounds.size.width
-                self.pageHeight = screenBounds.size.height
+                self.pageHeight = screenBounds.size.height + 30
             } else {
                 self.pageWidth = screenBounds.size.height
                 self.pageHeight = screenBounds.size.width
@@ -623,7 +621,7 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
 
         if screenBounds.size.width < screenBounds.size.height {
             self.pageWidth = screenBounds.size.width
-            self.pageHeight = screenBounds.size.height
+            self.pageHeight = screenBounds.size.height + 30
         } else {
             self.pageWidth = screenBounds.size.height
             self.pageHeight = screenBounds.size.width
@@ -670,7 +668,7 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         guard let page = page, let webView = page.webView else { return }
 
         let pageSize = self.readerConfig.isDirection(pageHeight, self.pageWidth, pageHeight)
-        let contentSize = page.webView?.scrollView.contentSize.forDirection(withConfiguration: self.readerConfig) ?? 0
+        let contentSize = (page.webView?.scrollView.contentSize.forDirection(withConfiguration: self.readerConfig)) + 30.0 ?? 0
         self.pageIndicatorView?.totalPages = ((pageSize != 0) ? Int(ceil(contentSize / pageSize)) : 0)
 
         let pageOffSet = self.readerConfig.isDirection(webView.scrollView.contentOffset.x, webView.scrollView.contentOffset.x, webView.scrollView.contentOffset.y)
