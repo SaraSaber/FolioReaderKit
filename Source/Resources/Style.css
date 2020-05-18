@@ -46,69 +46,43 @@ html.nightMode {
  *
  */
 
-@font-face {
-    font-family: 'andada';
-    src: url('file:///android_asset/fonts/andada/Andada-Regular.otf');
-}
+.andada, .andada p, .andada span, .andada div { font-family: "Andada", sans-serif !important; }
+.lato, .lato p, .lato span, .lato div { font-family: "Lato", serif !important; }
+.lora, .lora p, .lora span, .lora div { font-family: "Lora", serif !important; }
+.raleway, .raleway p, .raleway span, .raleway div { font-family: "Raleway", sans-serif !important; }
 
-@font-face {
-    font-family: 'lato';
-    src: url('file:///android_asset/fonts/lato/Lato-Regular.ttf');
-}
 
-@font-face {
-    font-family: 'lora';
-    src: url('file:///android_asset/fonts/lora/Lora-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'raleway';
-    src: url('file:///android_asset/fonts/raleway/Raleway-Regular.ttf');
-}
-
-.andada {
-     font-family: "andada", sans-serif;
- }
-.lato {
-     font-family: "lato", serif;
- }
-.lora {
-     font-family: "lora", serif;
- }
-.raleway {
-     font-family: "raleway", sans-serif;
- }
-
-html.textSizeOne { font-size: 13px !important; }
-html.textSizeTwo { font-size: 15px !important; }
-html.textSizeThree { font-size: 17px !important; }
-html.textSizeFour { font-size: 19px !important; }
-html.textSizeFive { font-size: 21px !important; }
+html.textSizeOne, .textSizeOne body { font-size: 13px !important; }
+html.textSizeTwo, .textSizeTwo body { font-size: 15px !important; }
+html.textSizeThree, .textSizeThree body { font-size: 17px !important; }
+html.textSizeFour, .textSizeFour body { font-size: 19px !important; }
+html.textSizeFive, .textSizeFive body { font-size: 21px !important; }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2em;
     line-height: 1.2;
 }
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     line-height: 1.2;
 }
 h3 {
-    font-size: 1.17rem;
+    font-size: 1.17em;
     line-height: 1.2;
 }
 h4 {
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 1.2;
 }
 h5 {
-    font-size: 0.83rem;
+    font-size: 0.83em;
     line-height: 1.2;
 }
 h6 {
-    font-size: 0.67rem;
+    font-size: 0.67em;
     line-height: 1.2;
 }
+
 /* Remove tap highlight */
 input, textarea, button, highlight, select, a {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
