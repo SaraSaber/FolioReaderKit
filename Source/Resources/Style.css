@@ -6,15 +6,6 @@
  *  Copyright (c) 2015 Folio Reader. All rights reserved.
  */
 
-/*
- *
- * Night mode
- *
- */
-
-html, body {
-    -webkit-transition: all 0.6s ease;
-}
 
 html {
     background-color: #FFFFFF !important;
@@ -24,11 +15,11 @@ body {
     background-color: transparent !important;
 }
 
-html.nightMode, html.nightMode body {
+html.nightMode {
     background-color: #131313 !important;
 }
 
-.nightMode p, .nightMode div, .nightMode span:not(.epub-media-overlay-playing) {
+.nightMode p, .nightMode div {
     color: #767676 !important;
     background-color: transparent !important;
 }
@@ -37,12 +28,11 @@ html.nightMode, html.nightMode body {
     color: #848484 !important;
 }
 
-html.nightMode .highlight-yellow {background:rgba(255, 235, 107, 0.9)}
-html.nightMode .highlight-green {background:rgba(192, 237, 114, 0.9)}
-html.nightMode .highlight-blue {background:rgba(173, 216, 255, 0.9)}
-html.nightMode .highlight-pink {background:rgba(255, 176, 202, 0.9)}
-html.nightMode .highlight-underline {border-bottom: 2px solid rgba(240, 40, 20, 0.6)}
-
+/* Forced font overrides */
+code, kbd, pre, samp, tt {
+    font-family: monospace, monospace !important;
+    font-size: 1rem;
+}
 
 /*
  *
@@ -62,41 +52,52 @@ html.textSizeFour, .textSizeFour body { font-size: 19px !important; }
 html.textSizeFive, .textSizeFive body { font-size: 21px !important; }
 
 h1 {
-    font-size: 2em;
+    font-size: 2rem;
     line-height: 1.2;
 }
 h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     line-height: 1.2;
 }
 h3 {
-    font-size: 1.17em;
+    font-size: 1.17rem;
     line-height: 1.2;
 }
 h4 {
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 1.2;
 }
 h5 {
-    font-size: 0.83em;
+    font-size: 0.83rem;
     line-height: 1.2;
 }
 h6 {
-    font-size: 0.67em;
+    font-size: 0.67rem;
     line-height: 1.2;
 }
-body {
-    word-break: break-word !important;
-    -webkit-hyphens: auto !important;
-    hyphens: auto !important;
+/* Remove tap highlight */
+input, textarea, button, highlight, select, a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-p, span, div {
-    font-size: 1em;
-    line-height: 1.5 !important;
+
+/* Highlight styles */
+html .highlight_yellow {background:rgb(255, 235, 107)}
+html .highlight_green {background:#C0ED72}
+html .highlight_blue {background:#ADD8FF}
+html .highlight_pink {background:#FFB0CA}
+html .highlight_underline {
+    text-decoration: none;
+    border-bottom: 2px solid #F02814;
 }
-@media only screen and (min-device-width: 600px) {
+
+html .highlight_yellow, html .highlight_green, html .highlight_blue, html .highlight_pink, span.epub-media-overlay-playing {
+    border-radius: 3px;
+    padding: 0 2px;
+    margin: 0 -2px;
+}
+@media only screen and (min-device-width: 200px) {
     div {
-        font-size: 1em;
+        font-size: 1rem;
         line-height: 1.438em !important;
     }
     body {
