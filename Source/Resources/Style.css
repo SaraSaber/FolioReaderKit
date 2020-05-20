@@ -20,7 +20,7 @@ html.nightMode {
 }
 
 .nightMode p, .nightMode div {
-    color: #767676 !important;
+    color: #ffffff !important;
     background-color: transparent !important;
 }
 
@@ -47,9 +47,9 @@ code, kbd, pre, samp, tt {
 
 html.textSizeOne, .textSizeOne body { font-size: 13px !important; }
 html.textSizeTwo, .textSizeTwo body { font-size: 15px !important; }
-html.textSizeThree, .textSizeThree body { font-size: 17px !important; }
-html.textSizeFour, .textSizeFour body { font-size: 19px !important; }
-html.textSizeFive, .textSizeFive body { font-size: 21px !important; }
+html.textSizeThree, .textSizeThree body { font-size: 18px !important; }
+html.textSizeFour, .textSizeFour body { font-size: 24px !important; }
+html.textSizeFive, .textSizeFive body { font-size: 28px !important; }
 
 h1 {
     font-size: 2rem;
