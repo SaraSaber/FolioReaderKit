@@ -28,7 +28,7 @@ public enum FolioReaderFont: Int {
 
     public var cssIdentifier: String {
         switch self {
-        case .andada: return "NotoNaskhArabic"
+        case .NotoNaskhArabic: return "NotoNaskhArabic"
         case .lato: return "lato"
         case .lora: return "lora"
         case .raleway: return "raleway"
