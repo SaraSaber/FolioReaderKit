@@ -25,7 +25,7 @@ html.nightMode {
 }
 
 .nightMode h1, .nightMode h2, .nightMode h3, .nightMode h4, .nightMode h5, .nightMode h6 {
-    color: #848484 !important;
+    color: #ffffff !important;
 }
 
 /* Forced font overrides */
@@ -40,7 +40,7 @@ code, kbd, pre, samp, tt {
  *
  */
 
-.andada, .andada p, .andada span, .andada div { font-family: "Andada", sans-serif !important; }
+.NotoNaskhArabic, .NotoNaskhArabic p, .NotoNaskhArabic span, .NotoNaskhArabic div { font-family: "NotoNaskhArabic", sans-serif !important; }
 .lato, .lato p, .lato span, .lato div { font-family: "Lato", serif !important; }
 .lora, .lora p, .lora span, .lora div { font-family: "Lora", serif !important; }
 .raleway, .raleway p, .raleway span, .raleway div { font-family: "Raleway", sans-serif !important; }
